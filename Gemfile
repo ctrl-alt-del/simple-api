@@ -38,6 +38,5 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use rails::API
+# Use Rails::API
 gem 'rails-api'
-
