@@ -52,5 +52,16 @@ Rails.application.routes.draw do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
-  #   end
+  #   
+
+  # Versioning APIs
+  namespace :api do
+      namespace :v1 do
+        
+      end
+
+      namespace :v2 do
+
+      end
+    end
 end
