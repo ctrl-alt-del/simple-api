@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  # get 'products/index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'api/v1/products#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -55,13 +57,15 @@ Rails.application.routes.draw do
   #   
 
   # Versioning APIs
-  namespace :api do
-      namespace :v1 do
-        
-      end
-
-      namespace :v2 do
-
-      end
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      # get "products/index"
+      resources :products, only: [:index]    
+      
     end
+
+    namespace :v2 do
+
+    end
+  end
 end
