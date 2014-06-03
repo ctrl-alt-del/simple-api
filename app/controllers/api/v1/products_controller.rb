@@ -17,6 +17,7 @@ class Api::V1::ProductsController < ApplicationController
     end
 
     def show
+    	render :json => @product
     end
 
     def update
