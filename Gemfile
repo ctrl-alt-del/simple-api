@@ -41,3 +41,5 @@ gem 'spring', :group => :development
 
 # Use Rails::API
 gem 'rails-api'
+
+gem 'devise'
